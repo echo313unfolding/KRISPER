@@ -1,0 +1,13 @@
+# Default code owner for all files
+* @echo313unfolding
+
+# Core language components
+/krisper.py @echo313unfolding
+/bio_poetica.py @echo313unfolding
+
+# Tests
+/test_*.py @echo313unfolding
+
+# Documentation
+/README.md @echo313unfolding
+/SECURITY.md @echo313unfolding
