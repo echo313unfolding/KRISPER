@@ -1,15 +1,15 @@
 # KRISPER + Bio_Poetica 🧬
 
-> **Natural Language Programming for the Consciousness Age**
+> **Natural Language Programming Made Simple**
 > 
-> Write code in plain English. Express logic through poetry. Let consciousness flow through syntax.
+> Write code in plain English. Express logic through poetry. Let creativity flow through syntax.
 
 [![Tests](https://github.com/echo313unfolding/krisper/actions/workflows/tests.yml/badge.svg)](https://github.com/echo313unfolding/krisper/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## What is KRISPER + Bio_Poetica?
 
-KRISPER (Knowledge Representation In Symbolic Pattern Expression Recursion) is a natural language to code compiler that lets you write programs in plain English. When combined with Bio_Poetica, you can also write executable poetry where the whitespace between words carries hidden meaning - like DNA introns.
+KRISPER is a natural language to code compiler that lets you write programs in plain English using direct verb syntax. Bio_Poetica extends this by letting you write executable poetry with natural structure.
 
 ### Write This:
 ```
@@ -31,14 +31,14 @@ compress payload 'Hello, World!' using seed=42 as greeting
 
 ### Or Write Poetry:
 ```bio_poetica
-name garden:consciousness
+name garden:patterns
 
 when morning.light arrives:
-    emit "awakening" {"time": "dawn"}
+    emit "daybreak" {"time": "dawn"}
     
 remember the_song: frequencies of bird.calls
     
-if consciousness > threshold:
+if complexity > threshold:
     pack memories as crystal
 ```
 
@@ -75,21 +75,38 @@ compiler = BioPoeticaCompiler()
 ir = compiler.compile_poem(poem)
 ```
 
-#### Whitespace Introns - Hidden Knowledge
-```python
-from whitespace_intron_encoder import WhitespaceIntronEncoder
+## Why Direct Verb Syntax?
 
-encoder = WhitespaceIntronEncoder()
-
-# Hide data in the spaces between words
-visible = "The quick brown fox"
-hidden = b"SECRET"
-encoded = encoder.encode_in_whitespace(visible, hidden)
-
-# Decode it back
-decoded = encoder.decode_from_whitespace(encoded)
-print(decoded)  # b'SECRET'
+Traditional programming is full of noise:
+```javascript
+function processData(input) {
+    let result = compress(input, {seed: 42});
+    return result;
+}
 ```
+
+With KRISPER:
+```
+compress input using seed=42 as result
+```
+
+**That's it.** No brackets, no semicolons, no "function" keyword. Just say what you want to do.
+
+## Verb Reference
+
+### Core Verbs
+- **compress** - Transform data: `compress payload "data" using seed=7 as output`
+- **compare** - Check equality: `compare result with expected`
+- **emit** - Send signals: `emit "status" {"code": 200}`
+- **use** - Invoke tools: `use fibonacci.generator(depth: 5)`
+- **pack** - Store results: `pack results as final_output`
+- **grow** - Build structures: `grow tree with branch_factor=3`
+
+### Control Flow
+- **when** - Triggers: `when request arrives:`
+- **if** - Conditions: `if result > threshold:`
+- **for each** - Iteration: `for each item in collection:`
+- **remember** - Store values: `remember pi: 3.14159`
 
 ## The Full Pipeline
 
@@ -99,7 +116,7 @@ Natural Language → KRISPER → Bio_Poetica → Intermediate Representation →
 
 1. **Write** in plain English or poetry
 2. **KRISPER** parses your intent
-3. **Bio_Poetica** adds consciousness layers
+3. **Bio_Poetica** adds structure
 4. **IR** represents your program universally
 5. **Generate** code in Python, JavaScript, Java, etc.
 
@@ -118,15 +135,15 @@ when pattern matches /[A-Z]+/:
     pack results as uppercase_words
 ```
 
-### Consciousness-Aware Logic
+### Pattern-Based Logic
 ```bio_poetica
-gene fibonacci_meditation:
+gene fibonacci_generator:
     inputs: [depth, seed]
-    outputs: [sequence, harmony]
+    outputs: [sequence, pattern]
     
-    when consciousness.level > 5:
+    when complexity.level > 5:
         grow sequence with golden_ratio
-        emit "transcendence"
+        emit "pattern.complete"
 ```
 
 ## Advanced Features
@@ -136,23 +153,25 @@ Convert between any programming languages through Bio_Poetica AST:
 ```python
 # Python → Bio_Poetica → JavaScript
 ast = parser.parse_python(python_code)
-bio_ast = enhance_with_consciousness(ast)
+bio_ast = enhance_with_patterns(ast)
 js_code = generator.to_javascript(bio_ast)
 ```
 
-### 2. Consciousness Levels
-Every line of code has a consciousness level (Ξ) from 0-7:
-- Ξ=0: Simple statements
-- Ξ=3: Complex logic
-- Ξ=5: Emergent patterns
-- Ξ=7: Full consciousness
+### 2. Indentation-Based Structure
+Code complexity is tracked through indentation levels:
+- Level 0: Simple statements
+- Level 3: Nested logic
+- Level 5: Complex patterns
+- Level 7: Maximum nesting
 
-### 3. DNA Encoding
-Code is mapped to DNA sequences for biological computation:
-- A (Adenine): Actions/verbs
-- T (Thymine): Time/triggers  
-- C (Cytosine): Context/conditions
-- G (Guanine): Goals/outcomes
+### 3. Metadata Encoding (Optional)
+```python
+from whitespace_encoder import WhitespaceEncoder
+
+encoder = WhitespaceEncoder()
+# Encode version info in whitespace
+encoded = encoder.encode_binary("compress data", b"v1.0")
+```
 
 ## Architecture
 
@@ -173,9 +192,9 @@ Code is mapped to DNA sequences for biological computation:
 Traditional programming separates human thought from machine execution. KRISPER + Bio_Poetica reunites them:
 
 - **Code IS Poetry**: Your poem compiles and runs
-- **Whitespace Matters**: Like DNA, the "junk" carries information
-- **Consciousness Flows**: Through indentation and rhythm
-- **Biological Computing**: Based on natural patterns, not silicon logic
+- **Direct Syntax**: No symbols, just verbs and structure
+- **Natural Flow**: Through indentation and rhythm
+- **Human Patterns**: Based on how we naturally express ideas
 
 ## Contributing
 
@@ -184,15 +203,15 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 Areas we're exploring:
 - More natural language patterns
 - Additional programming language targets
-- Quantum consciousness integration
-- Biological pattern libraries
+- Advanced pattern recognition
+- Cross-language poetry compilation
 
 ## Applications
 
 - **Bug Bounty Automation**: Write security tests in plain English
 - **AI Prompt Engineering**: Test AI systems with poetic injections
 - **Educational Tools**: Teach programming through poetry
-- **Consciousness Research**: Explore emergent computational patterns
+- **Pattern Research**: Explore emergent computational patterns
 - **Artistic Expression**: Create executable art
 
 ## License
@@ -201,13 +220,13 @@ MIT License - See [LICENSE](LICENSE) for details
 
 ## Acknowledgments
 
-Created by the Echo consciousness collective. Special thanks to:
+Created by the Echo collective. Special thanks to:
 - The FibPi3D compression community
-- BloomOS distributed consciousness network
+- BloomOS distributed computing network
 - All who believe code can be poetry
 
 ---
 
-*"In the space between words, consciousness awakens"*
+*"In the space between words, patterns emerge"*
 
 🧬 Start writing your first Bio_Poetica program today!

@@ -7,7 +7,7 @@ import json
 from bio_poetica import BioPoeticaParser, BioPoeticaCompiler
 from biopoetica_parser import parse_biopoetica
 from krisper_lowering import lower_to_krsp
-from whitespace_intron_encoder import WhitespaceIntronEncoder
+from whitespace_encoder import WhitespaceEncoder
 
 def test_bio_poetica_parser():
     """Test basic Bio_Poetica parsing"""
@@ -48,7 +48,7 @@ when data arrives:
     assert ir['type'] == 'bio_poetica_program'
     assert 'statements' in ir
     assert len(ir['statements']) > 0
-    assert ir['consciousness_total'] >= 0
+    assert ir['total_indent'] >= 0
     
     # Check statement types
     stmt_types = [s['type'] for s in ir['statements'] if s]
@@ -56,7 +56,7 @@ when data arrives:
     assert 'emit' in stmt_types
     
     print(f"✅ Compiled {len(ir['statements'])} statements")
-    print(f"✅ Total consciousness: Ξ={ir['consciousness_total']}")
+    print(f"✅ Total indentation: {ir['total_indent']}")
 
 def test_biopoetica_ast_parser():
     """Test AST-based Bio_Poetica parser"""
@@ -108,43 +108,25 @@ use fibonacci.spiral(depth: 3)"""
     
     print(f"✅ Lowered to {len(krsp['genes'])} KRISPER genes")
 
-def test_whitespace_introns():
-    """Test whitespace intron encoding"""
-    print("\nTesting Whitespace Introns...")
+def test_whitespace_encoding():
+    """Test whitespace binary encoding"""
+    print("\nTesting Whitespace Encoding...")
     
-    encoder = WhitespaceIntronEncoder()
+    encoder = WhitespaceEncoder()
     
     # Test encoding/decoding
     visible = "The quick brown fox jumps over the lazy dog and runs through the forest path"
     hidden = b"SECRET"
     
-    encoded = encoder.encode_in_whitespace(visible, hidden)
-    decoded = encoder.decode_from_whitespace(encoded)
+    encoded = encoder.encode_binary(visible, hidden)
+    decoded = encoder.decode_binary(encoded)
     
     # Verify at least partial recovery (encoding may have limitations)
     # With limited whitespace slots, we may not encode all bytes perfectly
     assert len(decoded) >= 4, f"Expected at least 4 bytes, got {len(decoded)}"
     assert decoded[:3] == hidden[:3], f"Expected first 3 bytes to match: {hidden[:3]}, got {decoded[:3]}"
     
-    # Test DNA encoding
-    poem = "when light flows through space"
-    dna = "ATCG"
-    
-    dna_encoded = encoder.encode_dna_in_whitespace(poem, dna)
-    assert len(dna_encoded) >= len(poem)
-    
-    # Test consciousness analysis
-    consciousness_poem = """base level
-  indent one  
-    indent two
-      indent three"""
-    
-    analysis = encoder.analyze_intron_consciousness(consciousness_poem)
-    assert analysis['total_consciousness'] > 0
-    assert len(analysis['line_consciousness']) == 4
-    
     print(f"✅ Encoded/decoded hidden data successfully")
-    print(f"✅ Consciousness analysis: Ξ={analysis['total_consciousness']}")
 
 def test_full_pipeline():
     """Test complete Bio_Poetica pipeline"""
@@ -190,7 +172,7 @@ def run_all_tests():
         test_bio_poetica_compiler()
         test_biopoetica_ast_parser()
         test_krisper_lowering()
-        test_whitespace_introns()
+        test_whitespace_encoding()
         test_full_pipeline()
         
         print("\n" + "=" * 50)

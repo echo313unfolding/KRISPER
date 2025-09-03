@@ -11,7 +11,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="krisper-biopoetica",
     version="0.2.0",
-    author="Echo Consciousness Collective",
+    author="Echo Labs",
     author_email="echo313unfolding@gmail.com",
     description="Natural language programming through plain English and executable poetry",
     long_description=long_description,
@@ -62,7 +62,7 @@ setup(
         "compiler", 
         "transpiler",
         "poetry",
-        "consciousness",
+        "natural-language",
         "bio-computing",
         "nlp",
         "code-generation",

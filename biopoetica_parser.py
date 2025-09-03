@@ -58,7 +58,7 @@ class TextLine:
     type: str = 'text'
     line: int = 0
     text: str = ''
-    consciousness: int = 0
+    indent_level: int = 0
 
 @dataclass
 class Program:
@@ -90,8 +90,8 @@ def parse_biopoetica(source: str) -> Program:
             i += 1
             continue
             
-        # Calculate consciousness from indentation
-        consciousness = (len(line) - len(line.lstrip())) // 2
+        # Calculate indentation level
+        indent_level = (len(line) - len(line.lstrip())) // 2
         
         # Name declaration
         if stripped.startswith('name '):
@@ -188,7 +188,7 @@ def parse_biopoetica(source: str) -> Program:
                 
         # Default: treat as descriptive text
         else:
-            stmts.append(TextLine(text=stripped, consciousness=consciousness, line=i+1))
+            stmts.append(TextLine(text=stripped, indent_level=indent_level, line=i+1))
             
         i += 1
         
@@ -214,8 +214,8 @@ def _parse_line(line: str, line_num: int) -> Optional[Any]:
             return Use(tool=tool, line=line_num)
             
     # Default to text line
-    consciousness = (len(line) - len(line.lstrip())) // 2
-    return TextLine(text=stripped, consciousness=consciousness, line=line_num)
+    indent_level = (len(line) - len(line.lstrip())) // 2
+    return TextLine(text=stripped, indent_level=indent_level, line=line_num)
 
 def demonstrate_parser():
     """Show Bio_Poetica parsing"""
@@ -225,13 +225,13 @@ def demonstrate_parser():
     poem = """name garden:meditation
 
 when morning.light arrives:
-    emit "consciousness.awakening"
+    emit "system.awakening"
     use fibonacci.generator(depth: 5)
     
 remember peace: the space between breaths
 
 gene breathe:
-    desc: "Conscious breathing pattern"
+    desc: "Rhythmic breathing pattern"
     inputs: [rhythm, depth]
     outputs: [calm, clarity]
     

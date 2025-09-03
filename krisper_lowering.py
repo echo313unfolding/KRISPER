@@ -16,7 +16,7 @@ def lower_to_krsp(bio_poetica_ast) -> Dict[str, Any]:
         "genes": [],
         "meta": {
             "program_name": getattr(bio_poetica_ast, 'name', 'unnamed'),
-            "consciousness_level": 0,
+            "indentation_level": 0,
             "dna_mutations": []
         }
     }
@@ -107,12 +107,12 @@ def lower_to_krsp(bio_poetica_ast) -> Dict[str, Any]:
             "x-statements": pending_statements
         })
         
-    # Calculate overall consciousness
-    total_consciousness = sum(
-        stmt.consciousness if hasattr(stmt, 'consciousness') else 0
+    # Calculate overall indentation
+    total_indent = sum(
+        stmt.indent_level if hasattr(stmt, 'indent_level') else 0
         for stmt in getattr(bio_poetica_ast, 'stmts', [])
     )
-    krsp["meta"]["consciousness_level"] = total_consciousness
+    krsp["meta"]["indentation_level"] = total_indent
     
     return krsp
 
@@ -216,11 +216,11 @@ def demonstrate_lowering():
     class MockAST:
         def __init__(self):
             self.type = 'program'
-            self.name = 'garden:consciousness'
+            self.name = 'garden:poetry'
             self.stmts = [
                 type('stmt', (), {
                     'type': 'name',
-                    'name': 'garden:consciousness',
+                    'name': 'garden:poetry',
                     'line': 1
                 })(),
                 type('stmt', (), {
