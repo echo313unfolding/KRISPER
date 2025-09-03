@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "krisper-biopoetica"
+version = "0.2.0"
+description = "Natural language programming through plain English and executable poetry"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Echo Consciousness Collective", email = "echo313unfolding@gmail.com"},
+]
+maintainers = [
+    {name = "Echo Consciousness Collective", email = "echo313unfolding@gmail.com"},
+]
+keywords = [
+    "natural-language-programming",
+    "compiler",
+    "transpiler", 
+    "poetry",
+    "consciousness",
+    "bio-computing",
+    "nlp",
+    "code-generation",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Software Development :: Interpreters",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8", 
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/echo313unfolding/krisper"
+"Bug Reports" = "https://github.com/echo313unfolding/krisper/issues"
+"Source" = "https://github.com/echo313unfolding/krisper"
+
+[project.scripts]
+krisper = "krisper:main"
+bio-poetica = "bio_poetica:main"
+
+[tool.setuptools]
+packages = ["krisper"]
+
+[tool.black]
+line-length = 100
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
