@@ -45,3 +45,4 @@ htmlcov/
 
 # Documentation
 docs/_build/
+setup_github_auth.sh
