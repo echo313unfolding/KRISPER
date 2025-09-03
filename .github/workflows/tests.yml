@@ -25,4 +25,4 @@ jobs:
         pip install -e .
     - name: Run tests
       run: |
-        python test_krisper.py
+        python3 test_krisper.py
