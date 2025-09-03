@@ -1,6 +1,9 @@
 #!/bin/bash
 # Simple test runner that actually works
 
+# Add current directory to Python path
+export PYTHONPATH=.
+
 echo "Running KRISPER tests..."
 python3 test_krisper.py || exit 1
 
