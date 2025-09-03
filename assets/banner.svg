@@ -1,0 +1,20 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="200" fill="#0D1117"/>
+  
+  <!-- Grid background -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F72311" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="200" fill="url(#grid)" />
+  
+  <!-- Title -->
+  <text x="400" y="80" font-family="monospace" font-size="48" fill="#00F723" text-anchor="middle" font-weight="bold">KRISPER</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="120" font-family="monospace" font-size="18" fill="#00F723" text-anchor="middle" opacity="0.8">Natural Language → Executable Code</text>
+  
+  <!-- Code example -->
+  <text x="400" y="160" font-family="monospace" font-size="14" fill="#00F723" text-anchor="middle" opacity="0.6">compress data as backup</text>
+</svg>

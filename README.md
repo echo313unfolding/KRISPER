@@ -1,10 +1,25 @@
-# KRISPER
+<p align="center">
+  <img src="assets/banner.svg" alt="KRISPER Banner" width="100%">
+</p>
 
-Natural language programming interface. Write code in plain English.
+<p align="center">
+  <strong>Natural language programming interface. Write code in plain English.</strong>
+</p>
 
-[![Tests](https://github.com/echo313unfolding/KRISPER/actions/workflows/tests.yml/badge.svg)](https://github.com/echo313unfolding/KRISPER/actions)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <a href="#install">Install</a> •
+  <a href="#quickstart">Quick Start</a> •
+  <a href="#features">Features</a> •
+  <a href="#documentation">Docs</a> •
+  <a href="#contributing">Contributing</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/actions/workflow/status/echo313unfolding/KRISPER/tests.yml?style=for-the-badge&logo=github&label=Tests&color=00F723" alt="Tests">
+  <img src="https://img.shields.io/badge/Python-3.8+-00F723?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/github/license/echo313unfolding/KRISPER?style=for-the-badge&color=00F723" alt="License">
+  <img src="https://img.shields.io/github/stars/echo313unfolding/KRISPER?style=for-the-badge&color=00F723" alt="Stars">
+</p>
 
 ## Install
 
@@ -28,6 +43,12 @@ Try the demo:
 ```bash
 python3 simple_demo.py
 ```
+
+## 🚀 Demo
+
+<p align="center">
+  <img src="https://via.placeholder.com/600x400/0D1117/00F723?text=Demo+GIF+Coming+Soon" alt="KRISPER Demo" width="600">
+</p>
 
 ## What It Does
 
