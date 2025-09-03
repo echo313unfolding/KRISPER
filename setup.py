@@ -17,7 +17,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/echo313unfolding/krisper",
-    packages=find_packages(),
+    py_modules=["krisper", "bio_poetica"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
