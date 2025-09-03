@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: KRISPER - Natural Language Programming Interface
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Fellows
+    given-names: Joshua
+    email: joshua@echolabs.systems
+    affiliation: Echo Labs
+version: 0.1.0
+date-released: 2025-01-28
+url: "https://github.com/echo313unfolding/KRISPER"
+license: MIT

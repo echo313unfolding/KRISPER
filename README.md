@@ -99,6 +99,10 @@ python3 test_bio_poetica.py
 
 Issues and PRs welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Authorship
+
+KRISPER and Bio_Poetica are original works by **Joshua Fellows**.
+
 ## License
 
 MIT - See [LICENSE](LICENSE)
