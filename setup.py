@@ -17,7 +17,15 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/echo313unfolding/krisper",
-    py_modules=["krisper", "bio_poetica"],
+    py_modules=[
+        "krisper",
+        "bio_poetica", 
+        "biopoetica_parser",
+        "krisper_lowering",
+        "whitespace_encoder",
+        "krisper_executor",
+        "bio_executor"
+    ],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
