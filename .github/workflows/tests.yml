@@ -28,8 +28,8 @@ jobs:
     
     - name: Run KRISPER tests
       run: |
-        python test_krisper.py
+        python3 test_krisper.py
     
     - name: Run Bio_Poetica tests  
       run: |
-        python test_bio_poetica.py
+        python3 test_bio_poetica.py
