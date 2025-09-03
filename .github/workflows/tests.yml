@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9"]
+        python-version: ["3.9", "3.10", "3.11"]
 
     steps:
     - uses: actions/checkout@v3
@@ -21,22 +21,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     
-    - name: Debug - List files
+    - name: Run tests
       run: |
-        ls -la
-        echo "---"
-        python3 --version
-    
-    - name: Install dependencies
-      run: |
-        python3 -m pip install --upgrade pip
-        python3 -m pip install -e .
-    
-    - name: Debug - Check installation
-      run: |
-        python3 -c "import sys; print(sys.path)"
-        python3 -c "import krisper; print('krisper imported')" || echo "Failed to import krisper"
-    
-    - name: Run KRISPER tests with error output
-      run: |
-        PYTHONPATH=. python3 test_krisper.py || (echo "Test failed with exit code $?"; exit 1)
+        chmod +x run_tests.sh
+        ./run_tests.sh
