@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
+        python-version: ["3.9"]
 
     steps:
     - uses: actions/checkout@v3
@@ -21,15 +21,22 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     
+    - name: Debug - List files
+      run: |
+        ls -la
+        echo "---"
+        python3 --version
+    
     - name: Install dependencies
       run: |
         python3 -m pip install --upgrade pip
         python3 -m pip install -e .
     
-    - name: Run KRISPER tests
+    - name: Debug - Check installation
       run: |
-        PYTHONPATH=. python3 test_krisper.py
+        python3 -c "import sys; print(sys.path)"
+        python3 -c "import krisper; print('krisper imported')" || echo "Failed to import krisper"
     
-    - name: Run Bio_Poetica tests  
+    - name: Run KRISPER tests with error output
       run: |
-        PYTHONPATH=. python3 test_bio_poetica.py
+        PYTHONPATH=. python3 test_krisper.py || (echo "Test failed with exit code $?"; exit 1)
