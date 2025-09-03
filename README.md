@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="KRISPER Banner" width="100%">
+  <img src="krisper_readme_intro.svg" alt="KRISPER — English → IR → Execution" />
 </p>
 
 <p align="center">
